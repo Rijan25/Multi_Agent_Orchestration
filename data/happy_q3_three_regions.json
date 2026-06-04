@@ -1,0 +1,65 @@
+{
+  "title": "Q3 revenue across US, EU and APAC",
+  "description": "Happy path: three sources, mixed currencies (USD/EUR/GBP), strong growth trend and a clear regional outlier for the anomaly analyst.",
+  "tag": "happy",
+  "request": "Summarize Q3 revenue performance across our US, EU and APAC databases.",
+  "sources": [
+    {
+      "id": "us_db",
+      "records": [
+        {"date": "2024-07-01", "region": "US", "revenue": 21000, "units": 78, "currency": "USD"},
+        {"date": "2024-07-08", "region": "US", "revenue": 22400, "units": 82, "currency": "USD"},
+        {"date": "2024-07-15", "region": "US", "revenue": 23100, "units": 85, "currency": "USD"},
+        {"date": "2024-07-22", "region": "US", "revenue": 24500, "units": 89, "currency": "USD"},
+        {"date": "2024-07-29", "region": "US", "revenue": 25200, "units": 92, "currency": "USD"},
+        {"date": "2024-08-05", "region": "US", "revenue": 26800, "units": 96, "currency": "USD"},
+        {"date": "2024-08-12", "region": "US", "revenue": 27500, "units": 99, "currency": "USD"},
+        {"date": "2024-08-19", "region": "US", "revenue": 28900, "units": 103, "currency": "USD"},
+        {"date": "2024-08-26", "region": "US", "revenue": 30100, "units": 107, "currency": "USD"},
+        {"date": "2024-09-02", "region": "US", "revenue": 31400, "units": 111, "currency": "USD"},
+        {"date": "2024-09-09", "region": "US", "revenue": 32800, "units": 115, "currency": "USD"},
+        {"date": "2024-09-16", "region": "US", "revenue": 34200, "units": 119, "currency": "USD"},
+        {"date": "2024-09-23", "region": "US", "revenue": 35900, "units": 124, "currency": "USD"},
+        {"date": "2024-09-30", "region": "US", "revenue": 37100, "units": 128, "currency": "USD"}
+      ]
+    },
+    {
+      "id": "eu_db",
+      "records": [
+        {"date": "2024-07-01", "region": "EU", "revenue": 14500, "units": 51, "currency": "EUR"},
+        {"date": "2024-07-08", "region": "EU", "revenue": 15100, "units": 53, "currency": "EUR"},
+        {"date": "2024-07-15", "region": "EU", "revenue": 15600, "units": 55, "currency": "EUR"},
+        {"date": "2024-07-22", "region": "EU", "revenue": 16200, "units": 57, "currency": "EUR"},
+        {"date": "2024-07-29", "region": "EU", "revenue": 16800, "units": 59, "currency": "EUR"},
+        {"date": "2024-08-05", "region": "EU", "revenue": 17500, "units": 61, "currency": "EUR"},
+        {"date": "2024-08-12", "region": "EU", "revenue": 18100, "units": 63, "currency": "EUR"},
+        {"date": "2024-08-19", "region": "EU", "revenue": 18800, "units": 66, "currency": "EUR"},
+        {"date": "2024-08-26", "region": "EU", "revenue": 19400, "units": 68, "currency": "EUR"},
+        {"date": "2024-09-02", "region": "EU", "revenue": 20100, "units": 70, "currency": "EUR"},
+        {"date": "2024-09-09", "region": "EU", "revenue": 20900, "units": 73, "currency": "EUR"},
+        {"date": "2024-09-16", "region": "EU", "revenue": 21600, "units": 75, "currency": "EUR"},
+        {"date": "2024-09-23", "region": "EU", "revenue": 22400, "units": 78, "currency": "EUR"},
+        {"date": "2024-09-30", "region": "EU", "revenue": 23200, "units": 81, "currency": "EUR"}
+      ]
+    },
+    {
+      "id": "apac_db",
+      "records": [
+        {"date": "2024-07-01", "region": "APAC", "revenue": 6200, "units": 28, "currency": "USD"},
+        {"date": "2024-07-08", "region": "APAC", "revenue": 6500, "units": 29, "currency": "USD"},
+        {"date": "2024-07-15", "region": "APAC", "revenue": 6800, "units": 31, "currency": "USD"},
+        {"date": "2024-07-22", "region": "APAC", "revenue": 7100, "units": 32, "currency": "USD"},
+        {"date": "2024-07-29", "region": "APAC", "revenue": 7400, "units": 33, "currency": "USD"},
+        {"date": "2024-08-05", "region": "APAC", "revenue": 7800, "units": 35, "currency": "USD"},
+        {"date": "2024-08-12", "region": "APAC", "revenue": 8100, "units": 36, "currency": "USD"},
+        {"date": "2024-08-19", "region": "APAC", "revenue": 8500, "units": 38, "currency": "USD"},
+        {"date": "2024-08-26", "region": "APAC", "revenue": 8900, "units": 40, "currency": "USD"},
+        {"date": "2024-09-02", "region": "APAC", "revenue": 9300, "units": 41, "currency": "USD"},
+        {"date": "2024-09-09", "region": "APAC", "revenue": 9700, "units": 43, "currency": "USD"},
+        {"date": "2024-09-16", "region": "APAC", "revenue": 10200, "units": 45, "currency": "USD"},
+        {"date": "2024-09-23", "region": "APAC", "revenue": 10700, "units": 47, "currency": "USD"},
+        {"date": "2024-09-30", "region": "APAC", "revenue": 11200, "units": 49, "currency": "USD"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Q3 revenue across US and EU",
+  "description": "Happy path: two clean sources, customer-ready summary at the end.",
+  "tag": "happy",
+  "request": "Summarize Q3 revenue performance across our US and EU databases.",
+  "sources": [
+    {
+      "id": "us_db",
+      "records": [
+        {"date": "2024-07-05", "region": "US", "revenue": 12500, "units": 45, "currency": "USD"},
+        {"date": "2024-07-12", "region": "US", "revenue": 13100, "units": 49, "currency": "USD"},
+        {"date": "2024-07-19", "region": "US", "revenue": 12900, "units": 48, "currency": "USD"},
+        {"date": "2024-07-26", "region": "US", "revenue": 14200, "units": 52, "currency": "USD"},
+        {"date": "2024-08-02", "region": "US", "revenue": 14800, "units": 55, "currency": "USD"},
+        {"date": "2024-08-09", "region": "US", "revenue": 15400, "units": 57, "currency": "USD"},
+        {"date": "2024-08-16", "region": "US", "revenue": 15900, "units": 59, "currency": "USD"},
+        {"date": "2024-08-23", "region": "US", "revenue": 16800, "units": 62, "currency": "USD"},
+        {"date": "2024-08-30", "region": "US", "revenue": 17200, "units": 63, "currency": "USD"},
+        {"date": "2024-09-06", "region": "US", "revenue": 17500, "units": 64, "currency": "USD"},
+        {"date": "2024-09-13", "region": "US", "revenue": 18100, "units": 66, "currency": "USD"},
+        {"date": "2024-09-20", "region": "US", "revenue": 18700, "units": 68, "currency": "USD"},
+        {"date": "2024-09-27", "region": "US", "revenue": 19200, "units": 70, "currency": "USD"}
+      ]
+    },
+    {
+      "id": "eu_db",
+      "records": [
+        {"date": "2024-07-05", "region": "EU", "revenue": 9800, "units": 32, "currency": "EUR"},
+        {"date": "2024-07-12", "region": "EU", "revenue": 10100, "units": 34, "currency": "EUR"},
+        {"date": "2024-07-19", "region": "EU", "revenue": 10300, "units": 35, "currency": "EUR"},
+        {"date": "2024-07-26", "region": "EU", "revenue": 10800, "units": 36, "currency": "EUR"},
+        {"date": "2024-08-02", "region": "EU", "revenue": 11200, "units": 38, "currency": "EUR"},
+        {"date": "2024-08-09", "region": "EU", "revenue": 11500, "units": 39, "currency": "EUR"},
+        {"date": "2024-08-16", "region": "EU", "revenue": 11900, "units": 40, "currency": "EUR"},
+        {"date": "2024-08-23", "region": "EU", "revenue": 12300, "units": 42, "currency": "EUR"},
+        {"date": "2024-08-30", "region": "EU", "revenue": 12700, "units": 43, "currency": "EUR"},
+        {"date": "2024-09-06", "region": "EU", "revenue": 13100, "units": 45, "currency": "EUR"},
+        {"date": "2024-09-13", "region": "EU", "revenue": 13500, "units": 46, "currency": "EUR"},
+        {"date": "2024-09-20", "region": "EU", "revenue": 13900, "units": 47, "currency": "EUR"},
+        {"date": "2024-09-27", "region": "EU", "revenue": 14400, "units": 49, "currency": "EUR"}
+      ]
+    }
+  ]
+}

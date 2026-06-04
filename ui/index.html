@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Agent Orchestration — Case Study C</title>
+  <link rel="stylesheet" href="/ui/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div>
+        <div class="brand-title">Multi-Agent Orchestration</div>
+        <div class="brand-sub">Case Study C · orchestrator · blackboard · validation gates</div>
+      </div>
+    </div>
+    <div class="topbar-meta">
+      <span class="badge badge-muted" id="llmBadge">LLM: detecting…</span>
+      <span class="badge badge-muted" id="runIdBadge">run: —</span>
+      <button id="viewLogBtn" class="badge badge-muted log-btn" disabled>View log</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="section-title">Samples</div>
+      <div class="sample-list" id="sampleList">
+        <div class="muted">Loading…</div>
+      </div>
+
+      <div class="section-title">Request</div>
+      <textarea id="requestInput" class="request-input" placeholder="Pick a sample, or paste a JSON object with `request` and `sources` here."></textarea>
+
+      <button id="runBtn" class="run-btn">Run pipeline →</button>
+      <div class="hint">The pipeline writes versioned artifacts to a shared blackboard. Click any node below to inspect its envelope and artifact.</div>
+    </aside>
+
+    <!-- Main content -->
+    <section class="content">
+      <!-- Plan + DAG -->
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">Plan</div>
+          <div class="card-sub" id="planSub">Waiting for a run.</div>
+        </div>
+        <div class="dag" id="dag"></div>
+      </div>
+
+      <div class="grid two">
+        <!-- Trace -->
+        <div class="card">
+          <div class="card-head">
+            <div class="card-title">Live trace</div>
+            <div class="card-sub">Every node, gate, and artifact in order.</div>
+          </div>
+          <div class="trace" id="trace">
+            <div class="muted">Trace events appear here when you run the pipeline.</div>
+          </div>
+        </div>
+
+        <!-- Budget + Final -->
+        <div class="card">
+          <div class="card-head">
+            <div class="card-title">Budget</div>
+            <div class="card-sub">One ledger, debited as nodes run.</div>
+          </div>
+          <div class="budget" id="budget">
+            <div class="budget-row"><span>Cost (USD)</span><span class="mono" id="bCost">—</span></div>
+            <div class="budget-row"><span>Tokens in / out</span><span class="mono" id="bTokens">—</span></div>
+            <div class="budget-row"><span>Cumulative work (ms)</span><span class="mono" id="bLatency">—</span></div>
+            <div class="budget-row"><span>Calls</span><span class="mono" id="bCalls">—</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">Result</div>
+          <div class="card-sub">Customer-ready summary and provenance chain.</div>
+        </div>
+        <div id="result" class="result">
+          <div class="muted">No result yet.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Artifact drawer -->
+  <div class="drawer" id="drawer">
+    <div class="drawer-head">
+      <div>
+        <div class="drawer-title" id="drawerTitle">Artifact</div>
+        <div class="drawer-sub mono" id="drawerRef"></div>
+      </div>
+      <button class="drawer-close" id="drawerClose">×</button>
+    </div>
+    <pre class="drawer-body mono" id="drawerBody"></pre>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <script src="/ui/app.js"></script>
+</body>
+</html>

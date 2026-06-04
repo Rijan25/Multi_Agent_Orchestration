@@ -1,0 +1,33 @@
+{
+  "title": "Edge: malformed source (drop-rate guard)",
+  "description": "Many duplicates and unknown currencies. The cleaner drops > 10% of rows; the drop-rate gate rejects and the run degrades rather than summarizing partial data (§9.1).",
+  "tag": "edge",
+  "request": "Summarize Q3 revenue across our regions.",
+  "sources": [
+    {
+      "id": "messy_db",
+      "records": [
+        {"date": "2024-07-01", "region": "US", "revenue": 1000, "units": 10, "currency": "USD"},
+        {"date": "2024-07-01", "region": "US", "revenue": 1000, "units": 10, "currency": "USD"},
+        {"date": "2024-07-01", "region": "US", "revenue": 1000, "units": 10, "currency": "USD"},
+        {"date": "2024-07-01", "region": "US", "revenue": 1000, "units": 10, "currency": "USD"},
+        {"date": "2024-07-02", "region": "US", "revenue": 1100, "units": 11, "currency": "ZZZ"},
+        {"date": "2024-07-03", "region": "US", "revenue": 1200, "units": 12, "currency": "ZZZ"},
+        {"date": "2024-07-04", "region": "US", "revenue": 1300, "units": 13, "currency": "ZZZ"},
+        {"date": "2024-07-05", "region": "US", "revenue": 1400, "units": 14, "currency": "ZZZ"},
+        {"date": "2024-07-06", "region": "US", "revenue": 1500, "units": 15, "currency": "ZZZ"},
+        {"date": "2024-07-07", "region": "US", "revenue": 1600, "units": 16, "currency": "USD"},
+        {"date": "2024-07-08", "region": "US", "revenue": 1700, "units": 17, "currency": "USD"},
+        {"date": "2024-07-09", "region": "US", "revenue": 1800, "units": 18, "currency": "USD"},
+        {"date": "2024-07-10", "region": "US", "revenue": 1900, "units": 19, "currency": "USD"},
+        {"date": "2024-07-11", "region": "US", "revenue": 2000, "units": 20, "currency": "USD"},
+        {"date": "2024-07-12", "region": "US", "revenue": 2100, "units": 21, "currency": "USD"},
+        {"date": "2024-07-13", "region": "US", "revenue": 2200, "units": 22, "currency": "USD"},
+        {"date": "2024-07-14", "region": "US", "revenue": 2300, "units": 23, "currency": "USD"},
+        {"date": "2024-07-15", "region": "US", "revenue": 2400, "units": 24, "currency": "USD"},
+        {"date": "2024-07-16", "region": "US", "revenue": 2500, "units": 25, "currency": "USD"},
+        {"date": "2024-07-17", "region": "US", "revenue": 2600, "units": 26, "currency": "USD"}
+      ]
+    }
+  ]
+}

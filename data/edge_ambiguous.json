@@ -1,0 +1,7 @@
+{
+  "title": "Edge: ambiguous request (no sources)",
+  "description": "A request with no attached data sources. The orchestrator's planner refuses to fabricate a DAG and returns a clarification — the system never invents an answer from nothing.",
+  "tag": "edge",
+  "request": "Tell me something interesting about our customers.",
+  "sources": []
+}
