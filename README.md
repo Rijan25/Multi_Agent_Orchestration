@@ -5,13 +5,13 @@ Case Study C from the ABC AI/ML Candidate Pack. This is a runnable implementatio
 ## Demo
 
 **UI overview — sample picker and empty state**
-![UI overview](Screenshot%202026-06-04%20220928.png)
+![UI overview](Screenshot%202026-06-04%20222455.png)
 
 **Happy path — full DAG run with live trace and budget**
-![Happy path run](Screenshot%202026-06-04%20220946.png)
+![Happy path run](Screenshot%202026-06-04%20222507.png)
 
 **Edge case — drop-rate gate rejects malformed source (§9.1)**
-![Drop-rate gate failure](Screenshot%202026-06-04%20220959.png)
+![Drop-rate gate failure](Screenshot%202026-06-04%20222524.png)
 
 ## Prerequisites
 
