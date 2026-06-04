@@ -2,6 +2,17 @@
 
 Case Study C from the ABC AI/ML Candidate Pack. This is a runnable implementation of the design described in `Multi_Agent_Orchestration_Design_Rijan_Pokhrel.docx`.
 
+## Demo
+
+**UI overview — sample picker and empty state**
+![UI overview](Screenshot%202026-06-04%20220928.png)
+
+**Happy path — full DAG run with live trace and budget**
+![Happy path run](Screenshot%202026-06-04%20220946.png)
+
+**Edge case — drop-rate gate rejects malformed source (§9.1)**
+![Drop-rate gate failure](Screenshot%202026-06-04%20220959.png)
+
 ## Prerequisites
 
 The Makefile uses [uv](https://docs.astral.sh/uv/) for dependency management. Install it once before running `make setup`:
