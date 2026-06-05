@@ -3,8 +3,8 @@
 Independent nodes run in parallel via asyncio.to_thread (agents are sync, so we
 offload them to threads to overlap I/O and CPU). Each node's output passes its
 gate before landing on the blackboard. A gate failure routes through the
-containment ladder: retry → degrade → escalate. Nothing reaches downstream
-agents until validated.
+containment ladder: retry → degrade. Nothing reaches downstream agents until
+validated.
 """
 from __future__ import annotations
 

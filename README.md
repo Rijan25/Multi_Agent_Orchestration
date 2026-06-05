@@ -48,7 +48,7 @@ An orchestrator–worker architecture over a shared blackboard:
 - **Writer** drafts the customer summary, reading only the findings (never raw data).
 - **Verifier** mechanically checks `claims_used ⊆ findings`.
 
-Every hand-off crosses a validation gate. Bad outputs are quarantined at the boundary and routed into the containment ladder (retry → fallback → degrade → escalate). No agent ever talks to another directly; they read scoped references from, and write versioned, immutable artifacts to, the blackboard.
+Every hand-off crosses a validation gate. Bad outputs are quarantined at the boundary and routed into the containment ladder (retry → degrade). No agent ever talks to another directly; they read scoped references from, and write versioned, immutable artifacts to, the blackboard.
 
 ## The AI boundary (swappable)
 
@@ -127,5 +127,6 @@ tests/                    pytest suite: schemas, end-to-end, gates, verifier
 - **Per-agent eval suite** (§10 of the design): pin contracts, run labeled tests in CI, drift dashboard.
 - **Real DAG executor with thread/process isolation** instead of asyncio fan-out — would matter once agents call expensive tools.
 - **Tenant-scoped long-term memory** (§14.3) — explicitly excluded from SDE2 scope, would be the first SDE3 addition.
+- **Extend the containment ladder** — current code is retry → degrade. Production would add (a) per-node **fallback** strategies (swap model, swap source, simplify prompt), and (b) **escalate** to a human/oncall channel when degrade is not acceptable for the request.
 - **Real provider fallback ladder** — currently the LLM client is one provider; production would fan out across providers when a model is degraded.
 - **Tool-use layer** — analysts currently compute numbers in Python; in production the model would call tools and the orchestrator would log every call as part of provenance.
